@@ -7,9 +7,7 @@ fn greet_world() {
     }
 }
 
-fn main() {
-    greet_world();
-
+fn parse_text() {
     let cats_data = "
     name, length(cm)
     wangcai, 80
@@ -36,4 +34,24 @@ fn main() {
         }
 
     }
+}
+
+fn main() {
+
+    greet_world();
+
+    parse_text();
+
+    let a = 100;
+    let b = 200;
+    let mut c = 300_i32;
+    let d: i32 = 30;
+
+    let e = add(add(a, b), add(c, d));
+    println!("(a + b) + (c + d) = {}", e)
+
+}
+
+fn add(i:i32, j:i32) -> i32 {
+    i + j
 }
